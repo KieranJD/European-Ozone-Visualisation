@@ -43,10 +43,14 @@
     % Fixing the colour bar
     caxis([-0.2 1])
 
+    Z = importdata(AvailableFiles(1).name);
+
     % Plot the data
     ozone = surfm(X, Y, Z, 'EdgeColor', 'none',...
         'FaceAlpha', 0.5) % edge colour outlines the edges, 'FaceAlpha', sets the transparency
 
+
+%% https://uk.mathworks.com/help/matlab/creating_plots/how-to-work-with-graphics-objects.html
 hour = 1;
 while hour <= 25
     key_press = waitforbuttonpress;
